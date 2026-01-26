@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -14,7 +15,25 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         
+    if(Keyboard.current.wKey.isPressed)
+        {
+            transform.position += transform.up * speed * Time.deltaTime;
+        }
 
+    if (Keyboard.current.sKey.isPressed)
+        {
+            transform.position -= transform.up * speed * Time.deltaTime;
+        }
+
+    if (Keyboard.current.dKey.isPressed)
+        {
+            transform.position += transform.right * speed * Time.deltaTime;
+        }
+
+    if (Keyboard.current.aKey.isPressed)
+        {
+            transform.position -= transform.right * speed * Time.deltaTime;
+        }
 
 
     }
