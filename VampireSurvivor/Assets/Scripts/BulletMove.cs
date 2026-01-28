@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-
 public class BulletMove : MonoBehaviour
 {
     public float Speed;
